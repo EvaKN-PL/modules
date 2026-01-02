@@ -15,7 +15,7 @@ The project currently implements a highly available network foundation (VPC) fea
 
 
 ## 📂 Project Structure
-
+```tekst
 ├── main.tf              # Main configuration calling the modules
 ├── variables.tf         # Root input variables
 ├── outputs.tf           # Root outputs (VPC ID, Subnet IDs)
@@ -24,7 +24,8 @@ The project currently implements a highly available network foundation (VPC) fea
     └── vpc/             # VPC Module
         ├── main.tf      # AWS Networking resources
         ├── variables.tf # Module-specific inputs
-        └── outputs.tf   # Module-specific outputs 
+        └── outputs.tf   # Module-specific outputs
+```
 
 🚀 Getting Started
 
@@ -46,3 +47,7 @@ The project currently implements a highly available network foundation (VPC) fea
 ⚠️ Cost Management
 
 Remember to destroy the infrastructure after training to avoid unnecessary AWS charges (especially for NAT Gateway and Elastic IP)!!
+
+```bash
+terraform destroy
+```
