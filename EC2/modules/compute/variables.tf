@@ -24,3 +24,8 @@ variable "my_ip" {
   description = "Public IP fetched automatically"
   type        = string
 }
+
+variable "key_name" {
+  description = "Name of SSH key in AWS"
+  type        = string
+}

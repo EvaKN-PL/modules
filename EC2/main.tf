@@ -20,5 +20,7 @@ module "compute" {
     subnet_id = module.network.public_subnet_ids
     my_ip = "${chomp(data.http.my_public_ip.response_body)}/32"
     instance_type = "t2.micro"
+
+    key_name = "linux-server-ewa"
   
 }
