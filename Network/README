@@ -25,3 +25,10 @@ The project currently implements a highly available network foundation (VPC) fea
         ├── main.tf      # AWS Networking resources
         ├── variables.tf # Module-specific inputs
         └── outputs.tf   # Module-specific outputs 
+
+🚀 Getting Started
+<b>Prerequisites</b>
+
+    - Terraform installed.
+
+    - AWS CLI configured with appropriate credentials.
