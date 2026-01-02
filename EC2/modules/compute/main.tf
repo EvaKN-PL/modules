@@ -25,7 +25,7 @@ resource "aws_security_group" "main" {
     }
   
 }
-
+## ingress
 resource "aws_vpc_security_group_ingress_rule" "allow_ssh" {
   security_group_id = aws_security_group.main.id
   cidr_ipv4         = [var.my_ip]
@@ -42,6 +42,7 @@ resource "aws_vpc_security_group_ingress_rule" "allow" {
   to_port           = 0
 }
 
+## egress
 resource "aws_vpc_security_group_egress_rule" "allow" {
   security_group_id = aws_security_group.main.id
   cidr_ipv4         = "0.0.0.0/0"
