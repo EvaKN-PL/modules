@@ -2,7 +2,7 @@
 
 This module manages the provisioning of EC2 instances and associated security resources. It is designed to work in tandem with a networking module that provides VPC and Subnet infrastructure.
 
-## Architecture
+🏗️ Architecture
 
 This module follows a decoupled architecture where networking resources are injected as variables. It specifically requires:
 1. **VPC ID**: To associate Security Groups.
@@ -10,11 +10,11 @@ This module follows a decoupled architecture where networking resources are inje
 
 
 
-## Features
+🔑 Features
 
- ** EC2 Instance Provisioning**: Creates an Amazon Linux 2023 instance.
- ** Security Groups**: Automatically sets up an EC2 Security Group with dynamic SSH access rules.
- ** SSH Access**: Uses an existing AWS Key Pair for secure authentication.
+ **EC2 Instance Provisioning**: Creates an Amazon Linux 2023 instance.
+ **Security Groups**: Automatically sets up an EC2 Security Group with dynamic SSH access rules.
+ **SSH Access**: Uses an existing AWS Key Pair for secure authentication.
 
 ## Usage
 
@@ -37,3 +37,12 @@ module "compute" {
   key_name      = "my-existing-aws-key"
   my_ip         = "1.2.3.4/32"
 }
+```
+
+Cost Management
+
+Remember to destroy the infrastructure after training to avoid unnecessary AWS charges (especially for NAT Gateway and Elastic IP)!!
+
+```bash
+terraform destroy
+```
