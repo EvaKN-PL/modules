@@ -1,5 +1,5 @@
 output "instance_id" {
     description = "ID creating instance in AWS"
-    value = aws_instance.main.id
+    value = module.compute.instance_id
   
 }
