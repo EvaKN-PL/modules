@@ -25,7 +25,6 @@ data "aws_availability_zones" "main" {
 }
 
 ## Public subnets
-
 resource "aws_subnet" "public" {
     count = length(var.public_subnet_cidr)
     vpc_id = aws_vpc.main.id
@@ -66,7 +65,6 @@ resource "aws_route_table_association" "public" {
 
 
 ## Private subnets
-
 resource "aws_subnet" "private" {
     count = length(var.private_subnet_cidr)
     vpc_id = aws_vpc.main.id
